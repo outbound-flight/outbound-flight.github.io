@@ -1,0 +1,90 @@
+---
+layout: default
+title: Home
+---
+<section class="band cream hero">
+  <div class="wrap">
+    <span class="dot" aria-hidden="true"></span>
+    <h1>Emotions, looked at from the <span class="hl">inside</span>.</h1>
+    <p class="sub">
+      I'm Shubham. Nine years a software developer, now a yoga teacher.
+      I make short videos in Hinglish on Indian philosophy and psychology,
+      <strong>from what I've tried and observed myself</strong>, not from a pulpit.
+    </p>
+    <div class="cta">
+      <!-- TODO: replace with your real Instagram URL -->
+      <a class="btn primary" href="https://instagram.com/YOUR_HANDLE">Watch on Instagram</a>
+      <!-- TODO: replace with your real YouTube URL -->
+      <a class="btn" href="https://youtube.com/@YOUR_HANDLE">YouTube Shorts</a>
+    </div>
+  </div>
+</section>
+
+<section class="band sun" id="work">
+  <div class="wrap">
+    <h2>What I <span class="hl">make</span></h2>
+    <p class="lead">Short, standalone pieces. You don't need to have seen anything else first.</p>
+    <div class="cards">
+      <div class="card c-mint">
+        <h3>Reels &amp; Shorts</h3>
+        <p>One idea per video: a pattern you might recognise in yourself, and what's going on underneath it.</p>
+      </div>
+      <div class="card c-peach">
+        <h3>Long-form</h3>
+        <p>Longer conversations where an idea gets room: where it comes from, where it applies, where it doesn't.</p>
+      </div>
+      <div class="card c-cream">
+        <h3>Teaching</h3>
+        <p>Trained as a yoga teacher (Yogarambha RYS300). I teach emotional processes more than flexibility.</p>
+      </div>
+      <div class="card c-mint">
+        <h3>Course material</h3>
+        <p>Structured course material is in the works.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band cream" id="about">
+  <div class="wrap">
+    <h2>My <span class="hl">story</span></h2>
+    <div class="rows">
+      <div class="bar"><p>Nine years a software developer. IIT Kharagpur, Computer Science.</p></div>
+      <div class="bar"><p>I started as a skeptic.</p><p class="o">I wanted evidence and a mechanism before believing anything.</p></div>
+      <div class="bar"><p>I tried a lot: meditation, breathwork, mantra, devotional practice, therapy, yoga.</p><p class="o">When something worked, I didn't just accept the explanation I was given. I wanted to know why. The common thread I kept finding was emotion.</p></div>
+      <div class="bar"><p>I left software to teach and create.</p><p class="o">Trained as a yoga teacher (Yogarambha RYS300). From a language-activism background, so I care about getting Sanskrit right. I speak Hinglish because that's how I think.</p></div>
+      <div class="bar"><p>I speak from what I've observed, not as an authority.</p><p class="o">I try to say where an idea comes from: a tradition, a study, or just my own practice.</p></div>
+    </div>
+    <div class="not">
+      <p>This is not therapy and not a replacement for it. If you're dealing with something heavy, please speak to a qualified professional.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band mint" id="writing">
+  <div class="wrap">
+    <h2>Latest <span class="hl">writing</span></h2>
+    <ul class="post-list">
+      {% for post in site.posts limit:3 %}
+      <li>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    <p class="more"><a href="{{ '/blog/' | relative_url }}">All posts &rarr;</a></p>
+  </div>
+</section>
+
+<section class="band bold" id="find">
+  <div class="wrap">
+    <h2>Find me</h2>
+    <div class="links">
+      <!-- TODO: replace the three hrefs below -->
+      <a class="link" href="https://instagram.com/YOUR_HANDLE"><span class="badge">&rarr;</span><span>Instagram<span class="sub2">Reels, main channel</span></span></a>
+      <a class="link" href="https://youtube.com/@YOUR_HANDLE"><span class="badge">&rarr;</span><span>YouTube<span class="sub2">Shorts and long-form</span></span></a>
+      <a class="link" href="mailto:you@example.com"><span class="badge">&rarr;</span><span>Email<span class="sub2">you@example.com</span></span></a>
+    </div>
+  </div>
+</section>

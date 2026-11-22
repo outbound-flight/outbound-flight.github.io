@@ -1,0 +1,25 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+---
+<section class="band cream">
+  <div class="wrap">
+    <div class="page-head">
+      <span class="eyebrow">Blog</span>
+      <h1>Writing</h1>
+      <p class="sub">Longer thoughts than a reel allows. Same rule as everywhere else: what I've observed, with sources named.</p>
+    </div>
+    <ul class="post-list">
+      {% for post in site.posts %}
+      <li>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %B %Y" }}</time>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+      </li>
+      {% else %}
+      <li><p>Nothing here yet.</p></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

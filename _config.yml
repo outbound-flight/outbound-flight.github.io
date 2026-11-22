@@ -1,0 +1,17 @@
+title: Shubham Sharma
+description: Indian philosophy, psychology and inner work, in Hinglish. From what I've tried and observed.
+url: "https://outbound-flight.github.io"
+baseurl: ""
+permalink: /blog/:year/:month/:slug/
+plugins:
+  - jekyll-feed
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+exclude:
+  - README.md
+  - publish.sh
+  - new-post.sh
